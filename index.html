@@ -10,12 +10,13 @@
 </head>
 <body>
 <div id="gallery">
-    <h1>Hola</h1>
 </div>
 <!-- <script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 <script type='text/javascript'>
     var c = document.getElementById("gallery");
-    c.append("<div id='container'></div>");
+    var div = document.createElement('div');
+    div.id = "container";
+    c.appendChild(div);
 </script>
 <script src="https://kit.fontawesome.com/aa2dcb4125.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="index.js"></script>
