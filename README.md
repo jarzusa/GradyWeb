@@ -1,1 +1,1 @@
-# GradyWeb
+# GradyGallery
