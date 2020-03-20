@@ -35,9 +35,14 @@ function drawCards(params) {
 
 
     var p_mame = document.createElement('p');
-    p_mame.className = 'author';
+    p_mame.className = 'card-author';
     p_mame.innerHTML = params.author;
     p_mame.style.visibility = "hidden";
+    
+    var p_id = document.createElement('p');
+    p_id.className = 'card-id';
+    p_id.innerHTML = params.id;
+    p_id.style.visibility = "visible";
     // img.style.width = params.width/4+"px";
     // img.style.maxWidth = params.width/8+"px";
     // img.style.maxHeight = params.height/8+"px";
@@ -53,10 +58,11 @@ function drawCards(params) {
 
     card.appendChild(img);
     card.appendChild(p_mame);
+    card.appendChild(p_id);
     // card.appendChild(img2);
     flexContainer.appendChild(card);
 
-    card.addEventListener("mouseover", event => {
+    card.addEventListener("mouseover", _event => {
         console.log(params.author);
         p_mame.style.visibility = "visible";
         // img2.style.visibility = "visible"
@@ -64,7 +70,7 @@ function drawCards(params) {
         card.style.backgroundColor = '#00D664'
     });
 
-    card.addEventListener("mouseout", event => {
+    card.addEventListener("mouseout", _event => {
 
         p_mame.style.visibility = "hidden";
         // card.removeChild(img2);
