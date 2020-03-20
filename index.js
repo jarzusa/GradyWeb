@@ -61,7 +61,7 @@ function drawCards(params) {
         p_mame.style.visibility = "visible";
         // img2.style.visibility = "visible"
         // img.style.visibility = "hidden"
-        // card.style.backgroundColor = '#00D664'
+        card.style.backgroundColor = '#00D664'
     });
 
     card.addEventListener("mouseout", event => {

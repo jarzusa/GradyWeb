@@ -62,13 +62,8 @@ img.card:hover {
     height: 20px;
     content: url("assets/img/logo-white.png");
     transform: scale(.4);
-
-    /* .card {
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
-    } */
 }
+
 
 
 
