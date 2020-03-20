@@ -29,7 +29,7 @@ function drawCards(params) {
     var img = document.createElement('img');
     img.src = params.download_url;
     img.className = 'card card-body col-sm-3';
-    img.style.width = params.width/4+"px";
+    // img.style.width = params.width/4+"px";
     // img.style.maxWidth = params.width/8+"px";
     img.style.height = params.height/4+"px";
     // img.style.maxHeight = params.height/8+"px";
