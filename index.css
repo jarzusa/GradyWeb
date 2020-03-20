@@ -1,3 +1,7 @@
+.gallery {
+    display: flex;
+}
+
 .container-fluid {
     max-width: 100%;
     margin: 2%;
