@@ -26,19 +26,51 @@ container.appendChild(flexContainer);
 
 function drawCards(params) {
     var card = document.createElement('div');
+    card.className = 'card card-body col-sm-3';
+
     var img = document.createElement('img');
     img.src = params.download_url;
     img.className = 'card card-body col-sm-3';
+    img.style.height = params.height / 3 + "px";
+
+
+    var p_mame = document.createElement('p');
+    p_mame.className = 'author';
+    p_mame.innerHTML = params.author;
+    p_mame.style.visibility = "hidden";
     // img.style.width = params.width/4+"px";
     // img.style.maxWidth = params.width/8+"px";
-    img.style.height = params.height/4+"px";
     // img.style.maxHeight = params.height/8+"px";
-    card.className = 'card card-body col-sm-3';
-    // card.innerHTML = params.author;
-    // card.appendChild(img);
-    flexContainer.appendChild(img);
 
-    img.addEventListener("mouseover", event => {
+
+    // var img2 = document.createElement('img');
+    // img2.src = 'assets/img/logo-white.png';
+    // img2.className = 'card card-body col-sm-3';
+    // img2.width = '30px';
+    // img2.height = '30px';
+    // img2.style.backgroundColor = '#00D664';
+    // img2.style.visibility = "hidden"
+
+    card.appendChild(img);
+    card.appendChild(p_mame);
+    // card.appendChild(img2);
+    flexContainer.appendChild(card);
+
+    card.addEventListener("mouseover", event => {
         console.log(params.author);
+        p_mame.style.visibility = "visible";
+        // img2.style.visibility = "visible"
+        // img.style.visibility = "hidden"
+        // card.style.backgroundColor = '#00D664'
+    });
+
+    card.addEventListener("mouseout", event => {
+
+        p_mame.style.visibility = "hidden";
+        // card.removeChild(img2);
+        // card.appendChild(img);
+        // img.style.visibility = "visible"
+        // img2.style.visibility = "hidden"
+        // card.style.backgroundColor = '#ffffff'
     });
 }
